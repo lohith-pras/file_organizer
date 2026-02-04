@@ -25,6 +25,9 @@ ENV/
 *.swp
 *.swo
 
+# Configuration (contains personal paths)
+config.json
+
 # OS
 .DS_Store
 Thumbs.db

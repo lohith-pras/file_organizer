@@ -27,29 +27,40 @@ pip install -r requirements.txt
 
 ### 2. Configure Your Preferences
 
-Edit `config.json` to customize:
+**First-time setup:**
+
+```bash
+# Copy the example configuration
+copy config.example.json config.json
+```
+
+Then edit `config.json` to customize:
 
 - **Watch directories**: Folders to monitor (e.g., Downloads, Desktop)
 - **Organization rules**: File types and where they should go
 - **Target folders**: Destination paths for organized files
 - **Settings**: Duplicate handling, date organization, etc.
 
+Replace `YourUsername` with your actual Windows username in all paths.
+
 **Example Configuration:**
 
 ```json
 {
   "watch_directories": [
-    "C:\\Users\\YourName\\Downloads",
-    "C:\\Users\\YourName\\Desktop"
+    "C:\\Users\\YourUsername\\Downloads",
+    "C:\\Users\\YourUsername\\Desktop"
   ],
   "organize_rules": {
     "Images": {
       "extensions": [".jpg", ".png", ".gif"],
-      "target_folder": "C:\\Users\\YourName\\Documents\\Organized\\Images"
+      "target_folder": "C:\\Users\\YourUsername\\Documents\\Organized\\Images"
     }
   }
 }
 ```
+
+> **⚠️ Important**: The `config.json` file contains your personal paths and should not be committed to version control. It's already in `.gitignore`.
 
 ## Usage
 
